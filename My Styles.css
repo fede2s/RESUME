@@ -7,6 +7,10 @@ body{
     font-size: 8px;
     height: 200%;
 }
+a{
+    text-decoration: none;
+    color:inherit;
+}
 
 body header div, .about_me, body footer{
     background-color:white;
@@ -36,18 +40,19 @@ h2{
     width: 25%;
     max-width: 4cm;
     margin: 0;
-    margin-right: 1rem;
-    padding: 0.5rem;
+    margin-right: 2em;
+    padding: 1em;
     font-family:monospace;
-    flex-shrink: 1;
+    flex-shrink: 0;
+    flex-grow: 0;
 }
 .profile{
     width:100%;
     margin: auto;
-
 }
 .information{
     margin: 0;
+    flex-shrink: 1;
     flex-grow: 1;
 }
 .list{
@@ -56,8 +61,8 @@ h2{
 }
 .icon{
     display:inline-block;
-    width: 1rem;
-    margin-right: 0.5rem;
+    width: 1em;
+    margin-right: 1em;
 }
 
 
@@ -71,25 +76,33 @@ h2{
     width: 90vw;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 1rem;
+    margin-bottom: 2em;
 }
 .education{
     width: 100%;
     display:flex;
     flex-direction: row;
     align-items: center;
+    justify-content:space-between;
 }
 .place_icon{
-    width:50%;
-    padding:25%;
+    width:75%;
+    padding:12.5%;
+    margin-left:auto;
+    margin-right:auto;
 }
 .place{
+    padding-left: 0.5em;
     width: 12.5%;
-    flex-shrink: 1;
+    max-width: 2cm;
+    flex-shrink: 0;
     flex-grow: 0;
+    text-align: center;
 }
 .info{
-    margin-left:5%;
+    margin: 0 5em;
+    flex-grow: 1;
+    flex-shrink: 1;
 }
 
 
