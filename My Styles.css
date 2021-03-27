@@ -96,11 +96,11 @@ h2{
 
 @media screen and (min-width:550px) and (max-width:800px){
     body{
-        font-size: 12px;
+        font-size: 4px;
     }
 }
 
-@media screen and (min-width:800px){
+@media screen and (min-width:800px) and (orientation:landscape){
     body{
         font-size: initial;
     }
