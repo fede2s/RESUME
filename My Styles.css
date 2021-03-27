@@ -92,21 +92,17 @@ h2{
     margin-left:5%;
 }
 
-body{
-    background-color:red;
-}
 
 @media screen and (min-width:550px) and (max-width:800px){
     body{
         font-size: 12px;
-        background-color: green;
+        max-width: 50rem;
     }
 }
 
 @media screen and (min-width:800px) and (orientation:landscape){
     body{
         font-size: initial;
-        background-color:blue;
     }
     .presentation, .about_me{
         max-width: 50rem;
