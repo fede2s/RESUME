@@ -32,12 +32,6 @@ h2{
     margin-right: auto;
     width: 90vw;
 }
-
-.profile{
-    width:100%;
-    margin: auto;
-
-}
 .intro{
     width: 25%;
     max-width: 4cm;
@@ -46,23 +40,25 @@ h2{
     padding: 0.5rem;
     font-family:monospace;
 }
+.profile{
+    width:100%;
+    margin: auto;
 
-.icon{
-    display:inline-block;
-    width: 1rem;
-    margin-right: 0.5rem;
 }
-.place_icon{
-    display:inline-block;
-    width: 2rem;
-    margin-right: 0.5rem;
-}
-
 .information{
     margin: 0;
     flex-wrap: 1;
     flex-grow: 1;
 }
+.icon{
+    display:inline-block;
+    width: 1rem;
+    margin-right: 0.5rem;
+}
+
+
+
+
 
 
 .about_me{
@@ -71,33 +67,31 @@ h2{
     width: 90vw;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 1rem;
 }
-
 .skills{
     width: 80%;
     margin: 0 auto;
 }
-
-
 .education{
     width: 100%;
     display:flex;
     flex-direction: row;
     align-items: center;
 }
-
+.place_icon{
+    width:50%;
+    padding:25%;
+}
 .place{
     width: 12.5%;
     flex-shrink: 1;
     flex-grow: 0;
 }
-.place_icon{
-    width:50%;
-    padding:25%;
-}
 .info{
     margin-left:5%;
 }
+
 
 
 @media screen and (min-width:550px) and (max-width:750px){
