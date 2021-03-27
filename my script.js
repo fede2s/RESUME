@@ -1,4 +1,4 @@
-/* This script calculate's my age so i don't need to remember about changing it every year*/
+/* This script calculates my age so i don't need to remember about changing it every year*/
 
 function calculateAge(date) {
     var today = new Date();

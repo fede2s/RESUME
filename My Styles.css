@@ -129,6 +129,38 @@ h2{
         font-size: 13px;
     }
 }
+
+header {
+    animation-duration: 3s;
+    animation-name: slidein;
+  }
+  
+main {
+    animation-duration: 3s;
+    animation-name: slidein2;
+  }
+  
+  @keyframes slidein {
+    from {
+        margin-top:-100%;
+    }
+  
+    to {
+        margin-top:1rem;
+        
+    }
+  }
+  
+  @keyframes slidein2 {
+    from {
+      margin-top: 200%;
+    }
+  
+    to {
+      margin-top: 0;
+    }
+  }
+  
 /*
 
 @media screen and (min-width:751px) and (orientation:landscape){
