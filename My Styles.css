@@ -1,8 +1,16 @@
 body{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-image:radial-gradient(circle, white,rgb(218, 255, 247));
+    background-image:radial-gradient(circle, white,rgb(187, 224, 212));
     background-repeat: no-repeat;
-    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+    height: 200%;
+}
+
+body header div, .about_me, body footer{
+    background-color:white;
+    box-shadow: rgb(215, 255, 253) 0.5rem 0.5rem 2rem;
 }
 hr{
     width:80%;
@@ -11,46 +19,116 @@ hr{
 h2{
     text-align: center;
 }
+
+
+
+.presentation{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90vw;
+}
+
 .profile{
     width:100%;
     margin: auto;
+
 }
+.intro{
+    width: 25%;
+    max-width: 4cm;
+    margin: 0;
+    margin-right: 1rem;
+    padding: 0.5rem;
+    font-family:monospace;
+}
+
 .icon{
     display:inline-block;
     width: 1rem;
     margin-right: 0.5rem;
 }
-.presentation{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 95%;
-    margin: 1rem auto;
+.place_icon{
+    display:inline-block;
+    width: 2rem;
+    margin-right: 0.5rem;
 }
-body:nth-child(2) div{
-    
-    padding: 1rem;
-    background-color:white;
-    box-shadow: rgb(61, 116, 113) 0.5rem 0.5rem 2rem;
-}
-.intro{
-    max-width: 25%;
-    margin-right: 1rem;
-}
+
 .information{
+    margin: 0;
     flex-wrap: 1;
     flex-grow: 1;
 }
 
+
+.about_me{
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.skills{
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+.education{
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.place{
+    width: 12.5%;
+    flex-shrink: 1;
+    flex-grow: 0;
+}
+.place_icon{
+    width:50%;
+    padding:25%;
+}
+.info{
+    margin-left:5%;
+}
+
+
+@media screen and (min-width:550px) and (max-width:750px){
+    body{
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width:750px){
+    body{
+        font-size: initial;
+    }
+    .presentation, .about_me{
+        max-width: 50rem;
+    }
+
+}
+/*
+
 @media screen and (min-width:751px) and (orientation:landscape){
     
-    
     .presentation{
-        max-width: 75%;
-        margin: 3rem auto;
+        max-width: 50rem;
     }
+    .about_me{
+        max-width: 50rem;
+    }
+
     .intro{
         max-width: 4cm;
         margin-right: 3rem;
     }
 }
+*/
