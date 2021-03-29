@@ -72,6 +72,10 @@ h2{
     width:100%;
     margin: auto;
 }
+.qr-img{
+    width:100%;
+    margin: auto;
+}
 .information{
     margin: 0;
     flex-shrink: 1;
