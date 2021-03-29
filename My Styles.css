@@ -168,16 +168,8 @@ h2{
     .profile-mid-res{
         display:initial;
     }
-}
-
-@media screen and (min-width:750px){
-    body{
-        font-size: 12px;
-    }
-
-    
-    .presentation, .about_me{
-        max-width: 50em;
+    .profile-hig-res{
+        display: none;
     }
     
     header {
@@ -189,6 +181,25 @@ h2{
         animation-duration: 3s;
         animation-name: slidein2;
     }
+}
+
+@media screen and (min-width:800px){
+    body{
+        font-size: 12px;
+    }
+    .presentation, .about_me{
+        max-width: 50em;
+    }
+    .profile-low-res{
+        display: none;
+    }
+    .profile-mid-res{
+        display: none;
+    }
+    .profile-hig-res{
+        display: initial;
+    }
+    
 }
 
 @media screen and (min-width:1081px){
