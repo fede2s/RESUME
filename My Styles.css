@@ -58,17 +58,7 @@ h2{
 .qr{
     display: none;
 }
-.profile-low-res{
-    width:100%;
-    margin: auto;
-}
-.profile-mid-res{
-    display: none;
-    width:100%;
-    margin: auto;
-}
-.profile-hig-res{
-    display: none;
+.profile{
     width:100%;
     margin: auto;
 }
@@ -160,22 +150,6 @@ h2{
     body{
         font-size: 8px;
     }
-}
-
-@media screen and (min-width:550px){
-    body{
-        font-size: 12px;
-    }
-    .profile-low-res{
-        display:none;
-    }
-    .profile-mid-res{
-        display:initial;
-    }
-    .profile-hig-res{
-        display: none;
-    }
-    
     header {
         animation-duration: 3s;
         animation-name: slidein;
@@ -187,6 +161,12 @@ h2{
     }
 }
 
+@media screen and (min-width:550px){
+    body{
+        font-size: 12px;
+    }
+}
+
 @media screen and (min-width:800px){
     body{
         font-size: 12px;
@@ -194,23 +174,12 @@ h2{
     .presentation, .about_me{
         max-width: 50em;
     }
-    .profile-low-res{
-        display: none;
-    }
-    .profile-mid-res{
-        display: none;
-    }
-    .profile-hig-res{
-        display: initial;
-    }
-    
 }
 
 @media screen and (min-width:1081px){
     body{
         font-size: initial;
     }
-
 }
 
 
