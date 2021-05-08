@@ -13,8 +13,31 @@ function calculateAge(date) {
     return year;
 }
 
+function sayhello(){
+    console.log("Hello, bro. Please hire me");
+}
+
+//Menu desplegable
+let menu = document.getElementById("menu");
+menuClosed = true;
+
+function deployMenu(){
+    menu.style.display="flex";
+    menuClosed=false;
+}
+function closeMenu(){
+    menu.style.display="none";
+    menuClosed=true;
+}
+function buttonMenu(){
+    menuClosed ? deployMenu() : closeMenu();
+}
+
+const sorry = () => alert("Sorry, i still working on that section");
+
 let birthday = '1996-09-06';
 
 let age = calculateAge(birthday);
 
 document.getElementById("age").innerHTML = age;
+//document.getElementById("menu").addEventListener('click',sayhello);
