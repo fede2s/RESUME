@@ -348,6 +348,12 @@ h2{
         flex-shrink: 0;
         flex-grow: 0;
     }
+    .presentation, .about_me{
+        min-width: 50em;
+        max-width: 80%;
+        margin-right: auto;
+        margin-left:auto;
+    }
 
 
 }
