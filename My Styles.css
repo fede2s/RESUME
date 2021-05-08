@@ -10,29 +10,46 @@
     text-shadow: turquoise 2px 2px;
         
 }
+.me2{
+    text-align: center;
+    margin-top: auto;
+    margin-right: auto;
+    margin-right: 5rem;
+    flex-grow: 1;
+    flex-shrink: 0;
+    font:inherit;
+    font-size: 2rem;
+    color: white;
+    text-shadow: turquoise 2px 2px;
+}
 
 .mainBar{
     background-color: rgb(187, 224, 212);
     width: 100vw;
-    height: 3em;
+    height: 3rem;
     position: fixed;
     top:0;
     left: 0;
     box-shadow: rgb(152, 209, 206) 0.5rem 0.5rem 1rem;
     text-align: center;
     z-index: 100;
+    display:inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .button-menu{
-    position: relative;
-    z-index: 105;
-    left: 1em;
-    height: 3em;
-    width: 3em;
+    margin-left: 1rem;
+    margin-right:1rem;
+    height: 3rem;
+    width: 3rem;
+    flex-grow:0;
+    flex-shrink: 0;
 }
 .littleBar1, .littleBar2, .littleBar3{
     position: absolute;
-    width: 100%;
+    border-radius: 1rem;
+    width: 3rem;
     height: 10%;
     background-color: white;
 }
@@ -98,7 +115,7 @@ h2{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-top: 1rem;
+    margin-top: 3rem;
     margin-bottom: 1rem;
     margin-left: auto;
     margin-right: auto;
@@ -192,7 +209,7 @@ h2{
         margin-top:-100%;
     }
     to {
-        margin-top:1rem;   
+        margin-top:3rem;   
     }
   }
   
@@ -243,21 +260,34 @@ h2{
 }
 
 @media screen and (orientation:portrait){
+    .mainBar{
+        height: 3rem;
+    }
+    .button-menu{
+        height: 3rem;
+        width: 3rem;
+    }
+    .me{
+        width:80%;
+        margin-right: auto;
+        margin-top:auto;
+    }
     .menu{
         position: absolute;
+        top: 5vh;
         width: 100vw;
-        height: 90vh;
+        height: 200%;
         font-size: initial;
         align-items: center;
         justify-content:flex-start;
-        padding-top:10vh;
+        padding-top:5vh;
     }
     .menu-option{
         width: 80%;
-        
-        margin-bottom: auto;
         margin-right: auto;
         margin-left:auto;
+        margin-top: 0;
+        margin-bottom:1rem;
         text-align: center;
         display: flex;
         flex-direction: column;
@@ -265,11 +295,15 @@ h2{
         padding: auto;
         background-color: white;
         box-shadow: turquoise 2px 2px 10px;
+        border-radius: 1rem;
     }
 }
 
 @media print{
     
+    .presentation{
+        margin-top: 0;
+    }
     .mainBar{
         display: none;
     }
@@ -292,8 +326,8 @@ h2{
     }
     .about_me{
         margin-bottom: 0;
-        padding-top: 0;
-        margin-top:0;
+        margin-top: 0;
+        padding-top:0;
     }
     .intro{
         display: none;
