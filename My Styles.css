@@ -20,7 +20,7 @@
     font:inherit;
     font-size: 2rem;
     color: white;
-    text-shadow: turquoise 2px 2px;
+    text-shadow: turquoise 2px 2px 5px;
 }
 
 .mainBar{
@@ -79,6 +79,9 @@
 .menu-option{
     height: 3em;
     padding-left: 1em;
+    color:white;
+    text-shadow: turquoise 2px 2px 10px;
+
 }
 
 
@@ -296,6 +299,8 @@ h2{
         background-color: white;
         box-shadow: turquoise 2px 2px 10px;
         border-radius: 1rem;
+        color: black;
+        text-shadow: none;
     }
 }
 
