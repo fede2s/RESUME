@@ -317,13 +317,16 @@ h2{
         text-shadow: none;
         margin-bottom: 1rem;
     }
+    .button-menu{
+        display: none;
+    }
     .menu{
         display:none;
     }
 
     body{
         font-size: 13px; 
-        background-color: white;  
+        background:none;
     }
 
     body header div, .about_me, body footer{
