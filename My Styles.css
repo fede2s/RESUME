@@ -309,24 +309,28 @@ h2{
         margin-top: 0;
     }
     .mainBar{
-        display: none;
+        color: initial;
+        background-color: transparent;
+        box-shadow: none;
+    }
+    .me2{
+        text-shadow: none;
+        margin-bottom: 1rem;
     }
     .menu{
         display:none;
     }
 
-    .me{
-        display: block;
-        top: -2em;
-        text-shadow: none;
-    }
     body{
-        font-size: 13px;   
+        font-size: 13px; 
+        background-color: white;  
     }
 
     body header div, .about_me, body footer{
         background-color:white;
         box-shadow:none;
+        border:1px solid grey ;
+        padding: 0;
     }
     .about_me{
         margin-bottom: 0;
