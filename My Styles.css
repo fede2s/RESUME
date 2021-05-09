@@ -19,8 +19,7 @@
     font:inherit;
     font-size: 1.5rem;
     color: white;
-    font-weight: bolder;
-    text-shadow: rgb(2, 124, 112) 2px 2px 4px;
+    text-shadow: rgb(2, 124, 112) 2px 2px 3px;
 }
 
 .mainBar{
@@ -81,7 +80,7 @@
     padding-left: 1em;
     color:white;
     font-weight: bolder;
-    text-shadow: rgb(2, 124, 112) 2px 2px 4px;
+    text-shadow: rgb(2, 124, 112) 2px 2px 3px;
 
 }
 
@@ -254,6 +253,9 @@ h2{
     }
     .presentation, .about_me{
         max-width: 50em;
+    }
+    .me2{
+        font-weight: bolder;
     }
 }
 
