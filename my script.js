@@ -40,4 +40,11 @@ let birthday = '1996-09-06';
 let age = calculateAge(birthday);
 
 document.getElementById("age").innerHTML = age;
-//document.getElementById("menu").addEventListener('click',sayhello);
+
+
+const videoContainer = document.getElementById("videoContainer");
+document.getElementById('xButton').addEventListener('click', () => {
+    videoContainer.style.display = "none";
+});
+
+document.getElementById("button-menu").addEventListener('click',buttonMenu);
