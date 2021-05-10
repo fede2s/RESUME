@@ -319,6 +319,7 @@ h2{
     }
     .me2{
         text-shadow: none;
+        color:black;
         margin-bottom: 1rem;
     }
     .button-menu{
