@@ -23,6 +23,7 @@ menuClosed = true;
 
 function deployMenu(){
     menu.style.display="flex";
+    videoContainer.style.display='none';
     menuClosed=false;
 }
 function closeMenu(){
@@ -32,6 +33,8 @@ function closeMenu(){
 function buttonMenu(){
     menuClosed ? deployMenu() : closeMenu();
 }
+
+const viewVideo = () => videoContainer.style.display="block"
 
 const sorry = () => alert("Sorry, i still working on that section");
 

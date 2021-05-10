@@ -369,6 +369,10 @@ h2{
         display:none;
     }
 
+    .videoContainer{
+        display: none;
+    }
+
     body{
         font-size: 13px; 
         background:none;
