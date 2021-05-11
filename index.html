@@ -11,7 +11,6 @@
 
     <div class="videoContainer" id="videoContainer">
         <div class="xButton" id="xButton"></div>
-        <!--<video src="https://youtu.be/sUCca_54RZ8" class="video" controls></video>-->
         <iframe src="https://www.youtube.com/embed/sUCca_54RZ8" title="My RESUME video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="video"></iframe>
     </div>
     <div class="mainBar">
@@ -23,17 +22,15 @@
         <div class="me2">Federico dos Santos</div>
     </div>
     <div class="menu" id = "menu">
-        <div class="menu-option" onclick="closeMenu();viewVideo();">View Video RESUME</div>
-        <div class="menu-option" onclick="closeMenu();print();">Print RESUME</div>
+        <div class="menu-option" id="viewVideo">View Video RESUME</div>
+        <div class="menu-option" id="printRESUME">Print RESUME</div>
         <a href="https://www.instagram.com/fede2santos/" target="_blank" class="menu-option" onclick="closeMenu()">Instagram</a>
-        <a href="https://wa.me/541139353557?text=Hola%2C%20Federico%2E%20Estuve%20viendo%20tu%20CV%20y%20me%20interesaría%20hablar%20con%20vos" target="_blank" class="menu-option" onclick="closeMenu();">Whatsapp me</a>
+        <a href="https://wa.me/541139353557?text=Hola%2C%20Federico%2E%20Estuve%20viendo%20tu%20CV%20y%20me%20interesaría%20hablar%20con%20vos" target="_blank" class="menu-option" id="menu-option" onclick="closeMenu()">Whatsapp me</a>
         <a href="#about_me" class="menu-option" onclick="closeMenu()">Read about me</a>
-        <div class="menu-option" onclick="closeMenu();sorry();">My other webpage</div>
+        <a href="https://www.github.com/fede2s/" target="_blank" class="menu-option" onclick="closeMenu()">My Portfolio</a>
         
     </div>
 
-    <!--<div class="me"><h1>Federico dos Santos</h1></div> -->
-    
     <header class="presentation">
         <div class="intro">
             <img src="img/profile3.jpg" class="profile">
