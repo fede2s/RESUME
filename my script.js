@@ -22,6 +22,7 @@ document.getElementById("age").innerHTML = age;
 const videoContainer = document.getElementById("videoContainer");
 const viewVideo = () => {
     videoContainer.style.display="block";
+    videoContainer.style.animationDuration = '1s';
     videoContainer.classList.replace("videoContainerHide","videoContainer");
     closeMenu();
 }

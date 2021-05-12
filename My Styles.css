@@ -267,7 +267,7 @@ h2{
 
 @keyframes slideInVideo{
     from {
-        left:-160vw;
+        left:-1000vw;
     }
     to{
         left:10vw;
@@ -306,7 +306,7 @@ h2{
         animation-name: slidein;
     }
     .videoContainer{
-        animation-duration: 3s;
+        animation-duration: 10s;
         animation-name: slideInVideo;
     }
     
