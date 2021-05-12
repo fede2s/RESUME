@@ -265,6 +265,15 @@ h2{
     }
   }
 
+@keyframes slideInVideo{
+    from {
+        left:-400vw;
+    }
+    to{
+        left:10vw;
+    }
+}
+
 
 @media screen and (min-width:380px){
     body{
@@ -273,6 +282,10 @@ h2{
     header {
         animation-duration: 3s;
         animation-name: slidein;
+    }
+    .videoContainer{
+        animation-duration:10s;
+        animation-name: slideInVideo;
     }
     
     main {

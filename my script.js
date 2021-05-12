@@ -59,4 +59,3 @@ const menuPrint = document.getElementById('printRESUME').addEventListener('click
 
 
 
-
