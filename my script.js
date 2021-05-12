@@ -26,6 +26,12 @@ const viewVideo = () => {
     videoContainer.classList.replace("videoContainerHide","videoContainer");
     closeMenu();
 }
+const presentVideo = () => {
+    videoContainer.style.display="block";
+    videoContainer.style.animationDuration = '3s';
+    videoContainer.classList.replace("videoContainerHide","videoContainer");
+    closeMenu();
+}
 document.getElementById('xButton').addEventListener('click', () => {
     //videoContainer.style.display = "none";
     videoContainer.className = "videoContainerHide";
@@ -64,5 +70,6 @@ const printRESUME = () => {
 }
 const menuPrint = document.getElementById('printRESUME').addEventListener('click',printRESUME);
 
-
+//At five secconds, my web will be present my video with de properly animation speed
+setTimeout(presentVideo,5000);
 

@@ -88,13 +88,21 @@
 .videoContainer{
     position: fixed;
     z-index: 2000;
-    display: block;
-    top: 4rem;
+    display: none;
+    top: 3rem;
     left: 10vw;
     width: 80vw;
-    height: 40vw;
-    
-    /*background-color: red;*/
+    height: 42vw;
+}
+
+.videoContainerHide{
+    position: fixed;
+    z-index: 2000;
+    display: none;
+    top: 3rem;
+    left: -160vw;
+    width: 80vw;
+    height: 42vw;
 }
 .xButton {
     height: 3rem;
@@ -267,7 +275,7 @@ h2{
 
 @keyframes slideInVideo{
     from {
-        left:-1000vw;
+        left:-80vw;
     }
     to{
         left:10vw;
@@ -277,24 +285,10 @@ h2{
 @keyframes slideOutVideo{
     from {
         left:10vw;
-        display:block
     }
     to{
         left:-160vw;
-        display: block;
     }
-}
-.videoContainerHide{
-    position: fixed;
-    z-index: 2000;
-    display: block;
-    top: 4rem;
-    left: -160vw;
-    width: 80vw;
-    height: 40vw;
-    animation-duration: 1s;
-    animation-name: slideOutVideo;
-    
 }
 
 @media screen and (min-width:380px){
@@ -308,6 +302,11 @@ h2{
     .videoContainer{
         animation-duration: 10s;
         animation-name: slideInVideo;
+    }
+    .videoContainerHide{
+        animation-duration: 1s;
+        animation-name: slideOutVideo;
+    
     }
     
     main {
