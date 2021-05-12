@@ -267,13 +267,35 @@ h2{
 
 @keyframes slideInVideo{
     from {
-        left:-400vw;
+        left:-160vw;
     }
     to{
         left:10vw;
     }
 }
 
+@keyframes slideOutVideo{
+    from {
+        left:10vw;
+        display:block
+    }
+    to{
+        left:-160vw;
+        display: block;
+    }
+}
+.videoContainerHide{
+    position: fixed;
+    z-index: 2000;
+    display: block;
+    top: 4rem;
+    left: -160vw;
+    width: 80vw;
+    height: 40vw;
+    animation-duration: 1s;
+    animation-name: slideOutVideo;
+    
+}
 
 @media screen and (min-width:380px){
     body{
@@ -284,7 +306,7 @@ h2{
         animation-name: slidein;
     }
     .videoContainer{
-        animation-duration:10s;
+        animation-duration: 3s;
         animation-name: slideInVideo;
     }
     

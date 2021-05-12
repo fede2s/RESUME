@@ -22,10 +22,15 @@ document.getElementById("age").innerHTML = age;
 const videoContainer = document.getElementById("videoContainer");
 const viewVideo = () => {
     videoContainer.style.display="block";
+    videoContainer.classList.replace("videoContainerHide","videoContainer");
     closeMenu();
 }
 document.getElementById('xButton').addEventListener('click', () => {
-    videoContainer.style.display = "none";
+    //videoContainer.style.display = "none";
+    videoContainer.className = "videoContainerHide";
+    setTimeout(() => {
+        videoContainer.style.display = "none"
+      }, 1000);
 });
 
 //Menu desplegable
@@ -49,6 +54,7 @@ document.getElementById("button-menu").addEventListener('click',buttonMenu);
 //Menu-Options
 //view video resume
 const videoButton = document.getElementById('viewVideo').addEventListener('click',viewVideo);
+
 
 //print my resume
 const printRESUME = () => {
