@@ -63,13 +63,13 @@ document.getElementById("button-menu").addEventListener('click',buttonMenu);
 const videoButton = document.getElementById('viewVideo').addEventListener('click',viewVideo);
 
 
-//print my resume
+//Print my resume
 const printRESUME = () => {
     closeMenu();
     print();
 }
 const menuPrint = document.getElementById('printRESUME').addEventListener('click',printRESUME);
 
-//At five secconds, my web will be present my video with de properly animation speed
+//At five secconds, my web will be present my video with the properly animation speed
 setTimeout(presentVideo,5000);
 
