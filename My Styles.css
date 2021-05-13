@@ -198,14 +198,16 @@ h2{
     flex-shrink: 1;
     flex-grow: 1;
 }
-.list{
+.list, .list1{
     width: 90%;
     margin: 0 auto;
 }
+.list1{
+    list-style-type: none;
+}
 .icon{
     display:inline-block;
-    width: 1em;
-    margin-right: 1em;
+    width: 1em;    
 }
 
 
