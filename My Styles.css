@@ -398,14 +398,8 @@ h2{
         color:black;
         margin-bottom: 1rem;
     }
-    .button-menu{
-        display: none;
-    }
-    .menu{
-        display:none;
-    }
 
-    .videoContainer{
+    .intro,.button-menu, .menu, .videoContainer,.videoContainerHide{
         display: none;
     }
 
@@ -425,9 +419,6 @@ h2{
         margin-top: 0;
         padding-top:0;
     }
-    .intro{
-        display: none;
-    }
     .qr{
         display: block;
         width: 25%;
@@ -443,7 +434,7 @@ h2{
         min-width: 50em;
         max-width: 80%;
         margin-right: auto;
-        margin-left:auto;
+        margin-left: auto;
     }
 
 
