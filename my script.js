@@ -18,50 +18,62 @@ document.getElementById("age").innerHTML = age;
 
 
 
-/* Script to skip video */
+/* ----------------Script to skip video----------------------- */
 const videoContainer = document.getElementById("videoContainer");
-const viewVideo = () => {
-    videoContainer.style.display="block";
-    videoContainer.style.animationDuration = '1s';
-    videoContainer.classList.replace("videoContainerHide","videoContainer");
-    closeMenu();
-}
-const presentVideo = () => {
-    videoContainer.style.display="block";
-    videoContainer.style.animationDuration = '3s';
-    videoContainer.classList.replace("videoContainerHide","videoContainer");
-    closeMenu();
-}
-document.getElementById('xButton').addEventListener('click', () => {
-    //videoContainer.style.display = "none";
-    videoContainer.className = "videoContainerHide";
-    setTimeout(() => {
-        videoContainer.style.display = "none"
-      }, 1000);
-});
+let videClosed = true;
 
-//Menu desplegable
+//When i want to view the video, it could be hidden or it could be closed. It depends on if it was presented before or not
+const viewVideo = () => {
+    videoContainer.style.animationDuration = '1s';
+    videoContainer.classList.replace("videoClose","videoOpen");
+    videoContainer.classList.replace("videoHidden","videoOpen");
+    closeMenu();
+    videClosed = false;
+}
+//The first time i show the video, the video is hidden, without animation, without display, so i change the style to videoOpen giving an animation and display to the container
+const presentVideo = () => {
+    videoContainer.style.animationDuration = '3s';
+    videoContainer.classList.replace("videoHidden","videoOpen");
+    closeMenu();
+    videoClosed = false;
+}
+//If the video is closed, i dont have to close it, so only close when it's open
+const closeVideo = () => {
+    videoContainer.style.animationDuration = '1s';
+    videoContainer.classList.replace("videoOpen","videoClose");
+}
+//If i press the x button, only have to close the video. The callback closeVideo solves the problem that if it's closed, we don't have to close it and show the unnecesary animation.
+document.getElementById('xButton').addEventListener('click', closeVideo);
+
+
+
+/*-----------------Deployable menu script-----------------------------*/
+//CSS selectors: menuOpen/menuClose/menuHidden
 const menu = document.getElementById("menu");
 let menuClosed = true;
 
 const deployMenu = () => {
-    menu.style.display="flex";
-    videoContainer.style.display='none';
+    menu.classList.replace("menuClose","menuOpen");
+    menu.classList.replace("menuHidden","menuOpen");
     menuClosed=false;
+
 }
 const closeMenu = () => {
-    menu.style.display="none";
+    menu.classList.replace("menuOpen","menuClose");
     menuClosed=true;
+    
 }
 const buttonMenu = () => {
     menuClosed ? deployMenu() : closeMenu();
+    if (!videoClosed){
+        closeVideo();
+    }
 }
 document.getElementById("button-menu").addEventListener('click',buttonMenu);
 
-//Menu-Options
+/*------------------Menu-Options--------------------------*/
 //view video resume
 const videoButton = document.getElementById('viewVideo').addEventListener('click',viewVideo);
-
 
 //Print my resume
 const printRESUME = () => {
@@ -70,6 +82,6 @@ const printRESUME = () => {
 }
 const menuPrint = document.getElementById('printRESUME').addEventListener('click',printRESUME);
 
-//At five secconds, my web will be present my video with the properly animation speed
+/*---At five secconds, my web will be present my video with the properly animation speed-----*/
 setTimeout(presentVideo,5000);
 

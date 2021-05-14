@@ -61,49 +61,56 @@
 .littleBar3{
     top:72.5%;
 }
-.menu{
-    /*display: none;*/
+.menuHidden{
+    display:none;
+}
+.menuOpen , .menuClose {
     background-color: rgb(187, 224, 212);
-    width: 15em;
+    width: 17em;
     position:fixed;
+    display: flex;
     top: 0;
     padding-top: 5em;
     left: 0;
     height: 100vh;
     z-index: 10;
-    display:none;
     flex-direction: column;
     flex-wrap: 0;
 }
+.menuClose{
+    left: -17em;
+}
+.videoHidden{
+    display:none;
+}
+
 .menu-option{
     height: 3em;
     padding-left: 1em;
     color:white;
     font-weight: bolder;
     text-shadow: rgb(2, 124, 112) 2px 2px 3px;
-
 }
 
 
-.videoContainer{
+.videoOpen{
     position: fixed;
     z-index: 2000;
-    display: none;
     top: 3rem;
     left: 10vw;
     width: 80vw;
     height: 42vw;
 }
 
-.videoContainerHide{
+.videoClose{
     position: fixed;
     z-index: 2000;
-    display: none;
     top: 3rem;
     left: -160vw;
     width: 80vw;
     height: 42vw;
 }
+
 .xButton {
     height: 3rem;
     width: 3rem;
@@ -225,6 +232,14 @@ h2{
     margin-bottom: 30vh;
     padding-bottom: 1em;
 }
+.lookingFor{
+    display:block;
+}
+.objetives{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
 .education{
     width: 100%;
     display:flex;
@@ -235,7 +250,7 @@ h2{
 .place_icon{
     width:75%;
     max-width: 1cm;
-    padding:12.5%;
+    padding-left:12.5%;
     padding-right:0;
     margin-left:auto;
     margin-right:auto;
@@ -249,7 +264,7 @@ h2{
     text-align: center;
 }
 .info{
-    margin: 0 5em;
+    margin: 0 0 0 5em;
     flex-grow: 1;
     flex-shrink: 1;
 }
@@ -293,6 +308,23 @@ h2{
     }
 }
 
+@keyframes slideInMenu{
+    from{
+        left:-160vw;
+    }
+    to{
+        left:0;
+    }
+}
+@keyframes slideOutMenu{
+    from{
+        left:0;
+    }
+    to{
+        left:-100vw;
+    }
+}
+
 @media screen and (min-width:380px){
     body{
         font-size: 8px;
@@ -301,15 +333,23 @@ h2{
         animation-duration: 3s;
         animation-name: slidein;
     }
-    .videoContainer{
-        animation-duration: 10s;
+    .videoOpen{
+        animation-duration: 3s;
         animation-name: slideInVideo;
     }
-    .videoContainerHide{
+    .videoClose{
         animation-duration: 1s;
         animation-name: slideOutVideo;
-    
     }
+    .menuOpen{
+        animation-duration: 0.5s;
+        animation-name: slideInMenu;
+    }
+    .menuClose{
+        animation-duration: 0.5s;
+        animation-name: slideOutMenu;
+    }
+
     
     main {
         animation-duration: 3s;
@@ -354,7 +394,7 @@ h2{
         margin-right: auto;
         margin-top:auto;
     }
-    .menu{
+    .menuOpen, .menuClose{
         position: absolute;
         top: 5vh;
         width: 100vw;
@@ -363,6 +403,12 @@ h2{
         align-items: center;
         justify-content:flex-start;
         padding-top:5vh;
+    }
+    .menuOpen{
+        left:0;
+    }
+    .menuHidden,.menuClose{
+        left:-100vw;
     }
     .menu-option{
         width: 80%;
@@ -399,7 +445,7 @@ h2{
         margin-bottom: 1rem;
     }
 
-    .intro,.button-menu, .menu, .videoContainer,.videoContainerHide{
+    .intro,.button-menu, .menuOpen, .menuHidden,.menuClose,.videoOpen,.videoClose, .lookingFor{
         display: none;
     }
 
