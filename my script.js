@@ -20,27 +20,38 @@ document.getElementById("age").innerHTML = age;
 
 /* ----------------Script to skip video----------------------- */
 const videoContainer = document.getElementById("videoContainer");
-let videClosed = true;
+let videoClosed = true;
 
 //When i want to view the video, it could be hidden or it could be closed. It depends on if it was presented before or not
 const viewVideo = () => {
-    videoContainer.style.animationDuration = '1s';
-    videoContainer.classList.replace("videoClose","videoOpen");
-    videoContainer.classList.replace("videoHidden","videoOpen");
-    closeMenu();
-    videClosed = false;
+    if(videoClosed){
+        const timeToOpenVideo = 1000;
+        videoContainer.style.animationDuration = `${timeToOpenVideo/1000}s`;
+        videoContainer.classList.replace("videoClose","videoOpen");
+        videoContainer.classList.replace("videoHidden","videoOpen");
+        closeMenu();
+        setTimeout( () => videoClosed = false , timeToOpenVideo);
+    }
 }
 //The first time i show the video, the video is hidden, without animation, without display, so i change the style to videoOpen giving an animation and display to the container
 const presentVideo = () => {
-    videoContainer.style.animationDuration = '3s';
-    videoContainer.classList.replace("videoHidden","videoOpen");
-    closeMenu();
-    videoClosed = false;
+    if(videoClosed){
+        const timeToOpenVideo = 3000;
+        videoContainer.style.animationDuration = `${timeToOpenVideo/1000}s`;
+        videoContainer.classList.replace("videoHidden","videoOpen");
+        closeMenu();
+        setTimeout( () => videoClosed = false , timeToOpenVideo );
+    }
 }
 //If the video is closed, i dont have to close it, so only close when it's open
 const closeVideo = () => {
-    videoContainer.style.animationDuration = '1s';
-    videoContainer.classList.replace("videoOpen","videoClose");
+    if (!videoClosed){
+        const timeToCloseVideo = 1000;
+        videoContainer.style.animationDuration = `${timeToCloseVideo/1000}s`;
+        videoContainer.classList.replace("videoOpen","videoClose");
+        setTimeout( () => videoContainer.classList.replace("videoClose","videoHidden") , timeToCloseVideo);
+    }
+    videoClosed = true;
 }
 //If i press the x button, only have to close the video. The callback closeVideo solves the problem that if it's closed, we don't have to close it and show the unnecesary animation.
 document.getElementById('xButton').addEventListener('click', closeVideo);
@@ -84,4 +95,11 @@ const menuPrint = document.getElementById('printRESUME').addEventListener('click
 
 /*---At five secconds, my web will be present my video with the properly animation speed-----*/
 setTimeout(presentVideo,5000);
+
+document.body.addEventListener('keydown', (e) => {
+    if(e.key == 'Escape') {
+        closeVideo();
+        closeMenu();
+    }
+});
 

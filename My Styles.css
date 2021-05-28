@@ -106,7 +106,7 @@
     position: fixed;
     z-index: 2000;
     top: 3rem;
-    left: -160vw;
+    left: -80vw;
     width: 80vw;
     height: 42vw;
 }
@@ -292,7 +292,7 @@ h2{
 
 @keyframes slideInVideo{
     from {
-        left:-80vw;
+        left:-100vw;
     }
     to{
         left:10vw;
@@ -304,7 +304,26 @@ h2{
         left:10vw;
     }
     to{
-        left:-160vw;
+        left:-100vw;
+    }
+}
+
+
+@keyframes slideInVideo2{
+    from {
+        left:-100vw;
+    }
+    to{
+        left:25vw;
+    }
+}
+
+@keyframes slideOutVideo2{
+    from {
+        left:25vw;
+    }
+    to{
+        left:-100vw;
     }
 }
 
@@ -427,6 +446,25 @@ h2{
         color: black;
         text-shadow: none;
     }
+}
+
+@media screen and (orientation: landscape){
+    .videoOpen, .videoClose {
+        width: 50vw;
+        height: 28.125vw;
+    }
+
+    .videoOpen {
+        animation-name: slideInVideo2;
+        
+        left: 25vw;
+    }
+    .videoClose{
+        animation-name:slideOutVideo2;
+        
+        left: -100vw;
+    }
+
 }
 
 @media print{
