@@ -232,11 +232,11 @@ h2{
     margin-bottom: 30vh;
     padding-bottom: 1em;
 }
-.lookingFor{
+article{
     display:block;
 }
-.objetives{
-    width: 90%;
+.about_me article p{
+    width: 85%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -247,7 +247,7 @@ h2{
     align-items: center;
     justify-content:space-between;
 }
-.place_icon{
+.place_icon, .place_icon2{
     width:75%;
     max-width: 1cm;
     padding-left:12.5%;
@@ -255,13 +255,22 @@ h2{
     margin-left:auto;
     margin-right:auto;
 }
-.place{
+.place_icon2{
+    width: 100%;
+    max-width: 4cm;
+}
+.place, .place-big{
     padding-left: 0.5em;
     width: 12.5%;
     max-width: 2cm;
     flex-shrink: 0;
     flex-grow: 0;
     text-align: center;
+}
+.place-big{
+    width: 25%;
+    max-width:4cm;
+    padding-right: 0.5em;
 }
 .info{
     margin: 0 0 0 5em;
@@ -483,7 +492,7 @@ h2{
         margin-bottom: 1rem;
     }
 
-    .intro,.button-menu, .menuOpen, .menuHidden,.menuClose,.videoOpen,.videoClose, .lookingFor{
+    .intro,.button-menu, .menuOpen, .menuHidden,.menuClose,.videoOpen,.videoClose, article{
         display: none;
     }
 

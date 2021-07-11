@@ -21,8 +21,9 @@ document.getElementById("age").innerHTML = age;
 /* ----------------Script to skip video----------------------- */
 const videoContainer = document.getElementById("videoContainer");
 let videoClosed = true;
+const wantToIntroduceVideo = false;
 
-//When i want to view the video, it could be hidden or it could be closed. It depends on if it was presented before or not
+//When i want to view the video, it could be hidden or it could be closed. It depends on if it was introduced before or not
 const viewVideo = () => {
     if(videoClosed){
         const timeToOpenVideo = 1000;
@@ -31,11 +32,12 @@ const viewVideo = () => {
         videoContainer.classList.replace("videoHidden","videoOpen");
         closeMenu();
         setTimeout( () => videoClosed = false , timeToOpenVideo);
+        alert("This video is deprecated. I already found my dream's job.");
     }
 }
 //The first time i show the video, the video is hidden, without animation, without display, so i change the style to videoOpen giving an animation and display to the container
-const presentVideo = () => {
-    if(videoClosed){
+const introduceVideo = () => {
+    if(videoClosed && wantToIntroduceVideo){
         const timeToOpenVideo = 3000;
         videoContainer.style.animationDuration = `${timeToOpenVideo/1000}s`;
         videoContainer.classList.replace("videoHidden","videoOpen");
@@ -93,8 +95,8 @@ const printRESUME = () => {
 }
 const menuPrint = document.getElementById('printRESUME').addEventListener('click',printRESUME);
 
-/*---At five secconds, my web will be present my video with the properly animation speed-----*/
-setTimeout(presentVideo,5000);
+/*---At five secconds, my web will be introduced my video with the properly animation speed-----*/
+setTimeout(introduceVideo,5000);
 
 document.body.addEventListener('keydown', (e) => {
     if(e.key == 'Escape') {
