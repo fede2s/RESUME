@@ -247,8 +247,7 @@ article{
     justify-content:space-between;
 }
 .place_icon, .place_icon2{
-    width:75%;
-    max-width: 1cm;
+    width:3em;
     padding-left:12.5%;
     padding-right:0;
     margin-left:auto;
@@ -257,6 +256,7 @@ article{
 .place_icon2{
     width: 100%;
     max-width: 4cm;
+    max-height: 3em;
 }
 .place, .place-big{
     padding-left: 0.5em;
