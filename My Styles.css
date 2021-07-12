@@ -422,7 +422,7 @@ article{
         margin-top:auto;
     }
     .menuOpen, .menuClose{
-        position: absolute;
+        position: fixed;
         top: 5vh;
         width: 100vw;
         height: 200%;
