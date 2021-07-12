@@ -223,7 +223,6 @@ h2{
 
 
 .about_me{
-    padding-top: 3em;
     display: flex;
     flex-direction: column;
     width: 90vw;
