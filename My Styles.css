@@ -206,7 +206,8 @@ h2{
     flex-grow: 1;
 }
 .list, .list1{
-    width: 90%;
+    width: 80%;
+    padding-left:0;
     margin: auto;
 }
 .list1{
