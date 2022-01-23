@@ -179,6 +179,9 @@ h2{
     margin-right: auto;
     width: 90vw;
 }
+.field-birthdate{
+    display: none;
+}
 .intro{
     width: 25%;
     max-width: 4cm;
@@ -485,6 +488,12 @@ article{
     
     .presentation{
         margin-top: 0;
+    }
+    .field-age{
+        display:none
+    }
+    .field-birthdate{
+        display: initial
     }
     .mainBar{
         color: initial;

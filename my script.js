@@ -15,6 +15,7 @@ const calculateAge = (date) => {
 
 let age = calculateAge(birthday);
 document.getElementById("age").innerHTML = age;
+document.getElementById("birthdate").innerHTML = birthday;
 
 
 
