@@ -3,7 +3,8 @@
 const birthday = '1996-09-06';
 const calculateAge = (date) => {
     var today = new Date();
-    var birthday = new Date(date).setUTCHours(3);
+    var birthday = new Date(date);
+    birthday.setUTCHours(3);
     var year = today.getFullYear() - birthday.getFullYear();
     var m = today.getMonth() - birthday.getMonth();
 
